@@ -1,0 +1,42 @@
+.description{
+    height: 20rem;
+    width: 25rem;
+    color: #efefef;
+    margin-right: 30rem;
+    margin-left: 10rem;
+}
+
+.title{
+    color: whitesmoke;
+    font-size: 6.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.descripPlanet{
+    display: flex;
+}
+
+.distance{
+    margin-right: 5rem;
+}
+
+@media (max-width: 70rem){
+    .title{
+        font-size: 2.5rem;
+    }
+    .description{
+        margin: 0rem;
+        height: 8rem;
+        width: 20rem;
+    }
+}
+
+@media (max-width: 39rem){
+    .description{
+        font-size: 0.8rem;
+        height: 20rem;
+    }
+    .title{
+        font-size: 1.6rem;
+    }
+}

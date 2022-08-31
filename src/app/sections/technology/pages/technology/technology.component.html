@@ -1,0 +1,22 @@
+<div class="background">
+    <app-head></app-head>
+    <div class="intro">
+        <div class="column">
+            <p class="pick"><span style="color: rgb(87, 87, 87);">03</span> SPACE LAUNCH 101</p>
+            <div class="order">
+                <div class="buttons">
+                    <div *ngFor="let tech of data.technology; let i = index">
+                        <button (click)="changeTech(tech.name)" [ngClass]="{a:name==tech.name, button: name!=tech.name}">{{i+1}}</button>
+                    </div>
+                </div>
+                <div class="description">
+                    <span>THE TERMINOLOGY...</span>
+                    <br>
+                    <span class="title"> {{name}}</span>
+                    <p class="desc">{{description}}</p>
+                </div>
+            </div>
+        </div>
+        <img src={{img}}> 
+    </div>
+</div>

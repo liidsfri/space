@@ -1,0 +1,26 @@
+<section class="menu">
+    <img src="../../../assets/shared/logo.svg"/>
+    <span class="line"></span>
+    <div class="buttons">
+        <button [ngClass]="{a:url=='/', button: url!='/'}" routerLink="">00 HOME</button>
+        <button [ngClass]="{a:url=='/destination', button: url!='/destination'}" routerLink="/destination">01 DESTINATION</button>
+        <button [ngClass]="{a:url=='/crew', button: url!='/crew'}" routerLink="/crew">02 CREW</button>
+        <button [ngClass]="{a:url=='/technology', button: url!='/technology'}" routerLink="/technology">03 TECHNOLOGY</button>
+    </div>
+    <div *ngIf="!optionMobile; else opt">
+        <button (click)="options()" class="select">
+            <img src="../../../assets/shared/icon-hamburger.svg">
+        </button>
+    </div>
+    <ng-template #opt>
+        <div class="options">
+            <button (click)="options()" class="close">
+                <img src="../../../assets/shared/icon-close.svg">
+            </button>
+            <button class="b" [ngClass]="{a:url=='/', button: url!='/'}" routerLink=""><b>00</b> HOME</button>
+            <button class="b" [ngClass]="{a:url=='/destination', button: url!='/destination'}" routerLink="/destination"><b>01</b> DESTINATION</button>
+            <button class="b" [ngClass]="{a:url=='/crew', button: url!='/crew'}" routerLink="/crew"><b>02</b> CREW</button>
+            <button class="b" [ngClass]="{a:url=='/technology', button: url!='/technology'}" routerLink="/technology"><b>03</b> TECHNOLOGY</button>    
+        </div>
+    </ng-template>
+</section>

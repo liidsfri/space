@@ -1,0 +1,18 @@
+<div class="background">
+    <app-head></app-head>
+    <div class="intro">
+        <div class="img">
+            <p class="pick"><span style="color: rgb(87, 87, 87);">01</span> PICK YOUR DESTINATION</p>
+            <img src={{img}}>
+        </div>
+        <div class="column">
+            <div class="buttons">
+                <button (click)="selectPlanet('Moon')" [ngClass]="{a:title=='Moon', button: title!='Moon'}">MOON</button>
+                <button (click)="selectPlanet('Mars')" [ngClass]="{a:title=='Mars', button: title!='Mars'}">MARS</button>
+                <button (click)="selectPlanet('Europa')" [ngClass]="{a:title=='Europa', button: title!='Europa'}">EUROPA</button>
+                <button (click)="selectPlanet('Titan')" [ngClass]="{a:title=='Titan', button: title!='Titan'}">TITAN</button>
+            </div>
+            <app-description [title]="title" [distance]="distance" [travel]="travel" [description]="description"></app-description>
+        </div>
+    </div>
+</div>
